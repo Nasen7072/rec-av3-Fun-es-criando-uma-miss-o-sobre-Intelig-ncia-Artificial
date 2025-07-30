@@ -1,0 +1,94 @@
+:root {
+  --fundo-claro: #e0e0e0;
+  --texto-claro: #1a1a1a;
+  --fundo-escuro: #121212;
+  --texto-escuro: #f0f0f0;
+  --cor-primaria: #00ffff;
+  --cor-secundaria: #00aaff;
+  --cor-destaque: #ff00cc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(120deg, #000000, #1a1a1a);
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 0.4s ease;
+  color: var(--texto-escuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+body.claro {
+  background: url('https://www.transparenttextures.com/patterns/symphony.png'), linear-gradient(120deg, #ffffff, #eaeaea);
+  color: var(--texto-claro);
+}
+
+#modo-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--cor-destaque);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.caixa-principal {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px var(--cor-primaria);
+  max-width: 700px;
+  width: 100%;
+}
+
+body.claro .caixa-principal {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px var(--cor-secundaria);
+}
+
+h1 {
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+button {
+  background-color: var(--cor-secundaria);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin: 10px auto;
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cor-destaque);
+  transform: scale(1.05);
+}
+
+.caixa-resultado {
+  margin-top: 20px;
+}
+
+.texto-resultado {
+  font-style: italic;
+  line-height: 1.6;
+}
